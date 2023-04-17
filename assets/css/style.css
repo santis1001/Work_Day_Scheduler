@@ -57,3 +57,12 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+#save_alert{
+  position: fixed;
+  left: 30%;
+  margin-top: 5%;
+  display: flex;
+  align-self: center;
+  width: 40%;
+}
