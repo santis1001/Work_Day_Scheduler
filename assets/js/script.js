@@ -14,6 +14,10 @@ var actual_time;
 var actual_date;
 var txt_Area= [];
 
+// this function will set values to global variables
+// initialize the object array that contains the text for the textarea element
+// run the render function so the cards appear on the html
+
 $(function () {
 
   doc_currentday.textContent = dayjs().format('dddd, MMMM D');
@@ -46,6 +50,10 @@ $(function () {
 
 });
 
+//the save data function will set variables used to identify from which button it was called from
+// then it'll get the data from that textarea and set it on a variable
+// this variable will be saved in the object array in it corresponding object and variable. and the object will be saved in the localStorage
+// once finish saving the data the function render and showalert will be called to rerender the html with the new text set on the document, and a banner will be show for 3 seconds.
 function saveData(event){
   event.preventDefault();
 
@@ -68,6 +76,9 @@ function saveData(event){
   render_day();
   showAlert();
 }
+//this function set the display of the banner in flex so we can watch it while its waiting for 3 second 
+// until the display it is set back to none so it isnt visible to us.
+//
 function showAlert(){
   doc_alert.setAttribute('style','display:flex;');
   var timelimit = 2;
@@ -81,6 +92,10 @@ function showAlert(){
   },1000);
 }
 
+// the render function resets the innerHTML of the list
+// runs a for loop one value for each hour, then it creates the element and append them so the card is generated
+// the text for the textarea is called from the object array for is specific position and set in a varaible. and later used for the textarea.textContent()
+//At the end, another for loop is run to add an event listener to the buttons and create an array containing each textarea document ID, so that the text can be retrieved more easily. 
 function render_day() {
   doc_hourlist.innerHTML="";
   
