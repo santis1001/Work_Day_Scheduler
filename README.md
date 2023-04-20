@@ -213,4 +213,4 @@ function showAlert(){
 # Video
 ![Application Website Video](./assets/video/webapp.gif)
 # Pages Link
-Website Link [Github Pages Link](https://santis1001.github.io/literate-eureka/)
+Website Link [Github Pages Link](https://santis1001.github.io/Work_Day_Scheduler/)
